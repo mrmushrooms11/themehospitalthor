@@ -6,6 +6,8 @@ This is a port of CorsixTH (https://github.com/CorsixTH/CorsixTH) to Android.
 
 You will need either a copy of the original Theme Hospital game or a demo of Theme Hospital in order to use this port. The demo can be automatically downloaded from within the app.
 
+https://github.com/mrmushrooms11/themehospitalthor/releases/tag/themehospitalthor
+
 ## Credits
 
 A list of all contributors to this project can be found here: [AUTHORS.md](https://github.com/alanwoolley/CorsixTH-Android/blob/dev/Authors.md).
