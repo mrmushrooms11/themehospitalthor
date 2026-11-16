@@ -218,4 +218,4 @@ Built on the work of:
 
 Original Theme Hospital by Bullfrog Productions.
 
-Thor adaptation, interface development and playtesting led by Tom Bridle.
+Thor adaptation, interface development and playtesting led by Triple Bee Games.
