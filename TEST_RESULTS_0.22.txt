@@ -1,0 +1,47 @@
+Theme Hospital Thor 0.22 — public data-import build
+
+PASS Java compiled against Android API 35; D8 and aapt2 completed.
+PASS Clean public source ZIP extracted and rebuilt using supplied native libraries
+and an external signing key; Java/Lua resources rebuild without private assets.
+PASS APK v2/v3 signature verification; certificate matches 0.21:
+85bfd2677d8190c24f4cc93e4c16e3568d3da81a85ed54690fa94fb62d09442e
+PASS Package org.corsixth.thor retained; versionCode 22 / versionName 0.22.
+PASS All shipped ARM64 native .so files byte-identical to 0.21.
+
+PASS GameDataTest: wrapped lowercase ZIP discovery; normalisation; original
+full game accepted; installer/incomplete data rejected; duplicate-case and
+path-traversal rejection; multiple installations rejected; import commit and
+interrupted-commit recovery; existing saves/settings kept; repeated engine
+updates preserve hospital data; optional-pack whitelist rejects script entries.
+
+PASS Native offscreen public resource run: no optional title/vending/music files;
+standard menu background; unavailable remastered option gives explanation;
+full level 1 loads; save/reload succeeds; no Lua runtime errors.
+PASS Native offscreen upgrade resource run: existing title/vending/music files
+survive public engine extraction; title and skin availability verified;
+full level loads and save/reload succeeds.
+PASS Classic music: same TiMidity source as shipping SDL_mixer, with new FreePats
+bank, loads/transcodes all eight original XMI tracks and renders ten seconds
+of non-zero PCM for every track (22050 Hz stereo).
+
+APK/source content audit: excludes original game archive, optional private
+music/speech/title/brand artwork and signing keystore. Public build uses staged
+allowlisted runtime assets even if private files exist in a development tree.
+FreePats sample sources/licences, DejaVu licence, upstream licences and FFmpeg
+5.1.3 source archive supplied. This is a packaging audit, not legal clearance.
+
+Limits: no physical Thor or Android emulator was available for this pass.
+Android file-picker, launcher-shortcut and on-device first-run/update behaviour
+need a device smoke test. Host rendering uses the existing native engine but
+has audio/movie playback disabled; music was checked separately as above.
+Folder SAF access is implemented with Android DocumentsContract, not simulated
+by the pure Java test. Cutscene decode and two-screen hardware routing are
+unchanged from 0.21 and were not retested on hardware.
+
+Device smoke test:
+1. Install over 0.21 WITHOUT uninstalling: direct launch, old save and packs work.
+2. On a clean test device/profile: import a wrapped game ZIP; play/save/relaunch.
+3. Repeat with an installed-game folder and a cancelled/incomplete import.
+4. Install a later same-certificate APK over this install: no data prompt.
+5. Close the game; long-press launcher icon > Game data & packs; import a
+   permitted optional ZIP and check its effects in-game.
