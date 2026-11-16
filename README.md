@@ -2,6 +2,8 @@
 
 An unofficial dual-screen Theme Hospital adaptation for AYN Thor, powered by CorsixTH. Touch and controller support, room decoration, improved management UI and optional enhancement packs. Requires your own original game data.
 
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/03677086-11f6-403c-8b7a-f56edbda4665" />
+
 # Theme Hospital — Thor Edition
 
 An unofficial adaptation of **Theme Hospital for the AYN Thor**, built on CorsixTH and CorsixTH-Android.
